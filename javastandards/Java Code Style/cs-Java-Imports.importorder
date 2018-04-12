@@ -1,0 +1,17 @@
+#Organize Import Order
+#Mon Apr 27 11:39:25 CEST 2015
+14=com
+13=com.lowagie
+12=com.linuxense
+11=com.f1j
+10=com.crystaldecisions
+9=elemental
+8=noNamespace
+7=flexjson
+6=jxl
+5=jboss
+4=sun
+3=net
+2=org
+1=javax
+0=java

@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.2//EN" "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
+<module name="Checker">
+    <property name="severity" value="warning" />
+    <module name="FileTabCharacter">
+        <property name="severity" value="error" />
+    </module>
+    <module name="RegexpHeader">
+        <property name="severity" value="error" />
+        <property name="fileExtensions" value="java" />
+    </module>
+
+    <module name="TreeWalker">
+        <!-- Coding standard Checks -->
+        <module name="CovariantEquals">
+            <property name="severity" value="error" />
+        </module>
+        <module name="EmptyStatement">
+            <property name="severity" value="error" />
+        </module>
+        <module name="EqualsAvoidNull">
+            <property name="severity" value="error" />
+        </module>
+        <module name="EqualsHashCode">
+            <property name="severity" value="error" />
+        </module>
+        <module name="IllegalInstantiation">
+            <property name="severity" value="error" />
+        </module>
+        <module name="InnerAssignment">
+            <property name="severity" value="error" />
+        </module>
+        <module name="MissingSwitchDefault">
+            <property name="severity" value="error" />
+        </module>
+        <module name="ModifiedControlVariable">
+            <property name="severity" value="error" />
+        </module>
+        <module name="SimplifyBooleanExpression">
+            <property name="severity" value="error" />
+        </module>
+        <module name="SimplifyBooleanReturn">
+            <property name="severity" value="error" />
+        </module>
+        <module name="StringLiteralEquality">
+            <property name="severity" value="error" />
+        </module>
+        <module name="NestedForDepth">
+            <property name="severity" value="error" />
+            <property name="max" value="4" />
+        </module>
+        <module name="NestedIfDepth">
+            <property name="severity" value="error" />
+            <property name="max" value="10" />
+        </module>
+        <module name="NestedTryDepth">
+            <property name="severity" value="error" />
+            <property name="max" value="7" />
+        </module>
+        <module name="NoFinalizer">
+            <property name="severity" value="error" />
+        </module>
+        <module name="SuperClone">
+            <property name="severity" value="error" />
+        </module>
+
+        <module name="IllegalThrows">
+            <property name="severity" value="error" />
+            <property name="illegalClassNames" value="java.lang.Throwable, java.lang.Error, java.lang.RuntimeException" />
+        </module>
+        <module name="PackageDeclaration">
+            <property name="severity" value="error" />
+        </module>
+        <module name="DeclarationOrder">
+            <property name="severity" value="error" />
+        </module>
+        <module name="DefaultComesLast">
+            <property name="severity" value="error" />
+        </module>
+        <module name="FallThrough">
+            <property name="severity" value="error" />
+        </module>
+        <module name="MultipleVariableDeclarations">
+            <property name="severity" value="error" />
+        </module>
+        <module name="UnnecessaryParentheses">
+            <property name="severity" value="error" />
+        </module>
+        <module name="OneStatementPerLine">
+            <property name="severity" value="error" />
+        </module>
+
+        <!-- Regexp check for Coding standard -->
+        <module name="RegexpSinglelineJava">
+            <property name="severity" value="error" />
+            <property name="format" value="[!=]=\s*?null" />
+            <property name="message" value="null should be on the left hand side" />
+            <property name="ignoreComments" value="true" />
+        </module>
+        <module name="RegexpSinglelineJava">
+            <property name="severity" value="error" />
+            <property name="format" value="[!=]=\s*?false" />
+            <property name="message" value="Do not use (boolvar == false) or (boolvar != false)" />
+            <property name="ignoreComments" value="true" />
+        </module>
+        <module name="RegexpSinglelineJava">
+            <property name="severity" value="error" />
+            <property name="format" value="false\s*?[!=]=" />
+            <property name="message" value="Do not use (false == boolvar) or (false != boolvar)" />
+            <property name="ignoreComments" value="true" />
+        </module>
+        <module name="RegexpSinglelineJava">
+            <property name="severity" value="error" />
+            <property name="format" value="[!=]=\s*?true" />
+            <property name="message" value="Do not use (boolvar == true) or (boolvar != true)" />
+            <property name="ignoreComments" value="true" />
+        </module>
+        <module name="RegexpSinglelineJava">
+            <property name="severity" value="error" />
+            <property name="format" value="true\s*?[!=]=" />
+            <property name="message" value="Do not use (true == boolvar) or (true != boolvar)" />
+            <property name="ignoreComments" value="true" />
+        </module>
+        <module name="RegexpSinglelineJava">
+            <property name="severity" value="error" />
+            <property name="format" value="System\.exit\(\)" />
+            <property name="message" value="Avoid using System.exit()" />
+            <property name="ignoreComments" value="true" />
+        </module>
+        <module name="RegexpSinglelineJava">
+            <property name="severity" value="error" />
+            <property name="format" value="System\.out\.print" />
+            <property name="message" value="Do not use System.out.print*" />
+            <property name="ignoreComments" value="true" />
+        </module>
+        <module name="RegexpSinglelineJava">
+            <property name="severity" value="error" />
+            <property name="format" value="printStackTrace\(" />
+            <property name="message" value="Do not use printStackTrace" />
+            <property name="ignoreComments" value="true" />
+        </module>
+        <module name="RegexpSinglelineJava">
+            <property name="severity" value="error" />
+            <property name="format" value="\*.*DOCUMENT\s*?ME" />
+            <property name="message" value="Documentation Pending" />
+        </module>
+        <module name="RegexpSinglelineJava">
+            <property name="severity" value="error" />
+            <property name="format" value="\s*?SELECT\s*?[*]" />
+            <property name="message" value="Select *" />
+        </module>
+        <module name="RegexpSinglelineJava">
+            <property name="severity" value="error" />
+            <property name="format" value="/[/*]\s*import.*?\;" />
+            <property name="message" value="Commented Imports" />
+        </module>
+        <module name="RegexpSinglelineJava">
+            <property name="severity" value="error" />
+            <property name="format" value="append\(&quot;[^\\]&quot;\)" />
+            <property name="message" value="Use append('x') instead" />
+            <property name="ignoreComments" value="true" />
+        </module>
+        <module name="RegexpSinglelineJava">
+            <property name="severity" value="error" />
+            <property name="format" value="for\s*?\(.+?\.size\(\);" />
+            <property name="message" value="Do not recompute size in loop" />
+            <property name="ignoreComments" value="true" />
+        </module>
+        <module name="RegexpSinglelineJava">
+            <property name="severity" value="error" />
+            <property name="format" value="for\s*?\(.+?\.length\(\);" />
+            <property name="message" value="Do not recompute length() in loop" />
+            <property name="ignoreComments" value="true" />
+        </module>
+        <module name="RegexpSinglelineJava">
+            <property name="severity" value="error" />
+            <property name="format" value=".get\(\s*[&quot;']" />
+            <property name="message" value="avoid .get(String literal), instead use constant" />
+            <property name="ignoreComments" value="true" />
+        </module>
+        <module name="RegexpSinglelineJava">
+            <property name="severity" value="error" />
+            <property name="format" value="HashTable" />
+            <property name="message" value="Avoid usage of Hashtable " />
+            <property name="ignoreComments" value="true" />
+        </module>
+        <module name="RegexpSinglelineJava">
+            <property name="severity" value="error" />
+            <property name="format" value="Vector" />
+            <property name="message" value="Avoid usage of Vector" />
+            <property name="ignoreComments" value="true" />
+        </module>
+        <module name="RegexpSinglelineJava">
+            <property name="severity" value="error" />
+            <property name="format" value="new Color\(" />
+            <property name="message" value="Do not instantiate Color object, use static call" />
+            <property name="ignoreComments" value="true" />
+        </module>
+        <module name="RegexpSinglelineJava">
+            <property name="severity" value="error" />
+            <property name="format" value="[Cc]ached[Rr]ow[sS]et" />
+            <property name="message" value="CachedRowSet is no longer used" />
+            <property name="ignoreComments" value="true" />
+        </module>
+        <module name="RegexpSinglelineJava">
+            <property name="severity" value="error" />
+            <property name="format" value="ResultSet\s+?crs" />
+            <property name="message" value="ResultSet variable is named crs" />
+            <property name="ignoreComments" value="true" />
+        </module>
+        <module name="RegexpSinglelineJava">
+            <property name="severity" value="error" />
+            <property name="format" value="\?\s*?true\s*?:\s*?false" />
+            <property name="message" value="Avoid inline conditional explicit check for true/false" />
+        </module>
+        <module name="RegexpSinglelineJava">
+            <property name="severity" value="error" />
+            <property name="format" value="0\s*?[!=]=\s*?[a-zA-Z]*?[lL]ist\.size\(\)" />
+            <property name="message" value="Usage of 0 == list.size()" />
+            <property name="ignoreComments" value="true" />
+        </module>
+        <module name="RegexpSinglelineJava">
+            <property name="severity" value="error" />
+            <property name="format" value="\.append\(.+?\)\.append\(" />
+            <property name="message" value="Chained Append" />
+        </module>
+        <module name="RegexpSinglelineJava">
+            <property name="severity" value="error" />
+            <property name="format" value="\.append\(.+?\s+?\+\s+?.[^\d]+?\)" />
+            <property name="message" value="Concatenation in append" />
+        </module>
+        <module name="RegexpSinglelineJava">
+            <property name="severity" value="error" />
+            <property name="format" value="(.+?[&quot;']\s+?\+\s+?.+?)|(.+?\+\s+?[&quot;'].+?)" />
+            <property name="message" value="Chained concatenation" />
+        </module>
+
+        <!-- Imports Check -->
+        <module name="AvoidStarImport">
+            <property name="severity" value="error" />
+        </module>
+        <module name="IllegalImport">
+            <property name="severity" value="error" />
+            <property name="illegalPkgs" value="sun.misc.BASE64Encoder" />
+        </module>
+        <module name="RedundantImport">
+            <property name="severity" value="error" />
+        </module>
+        <module name="UnusedImports">
+            <property name="severity" value="error" />
+        </module>
+        <module name="ImportOrder">
+            <property name="severity" value="error" />
+            <property name="groups" value="java, javax, org, net, sun, jboss, jxl, flexjson, noNamespace, elemental, com.crystaldecisions, com.f1j, com.linuxense, com.lowagie, com" />
+            <property name="separated" value="true" />
+        </module>
+
+        <!-- Javadoc Check -->
+        <module name="JavadocType">
+            <property name="severity" value="error" />
+            <property name="authorFormat" value="^CSquare$" />
+            <property name="allowUnknownTags" value="true" />
+        </module>
+        <module name="JavadocMethod">
+            <property name="severity" value="error" />
+            <property name="suppressLoadErrors" value="true" />
+        </module>
+        <module name="JavadocVariable">
+            <property name="severity" value="IGNORE" />
+        </module>
+        <module name="WriteTag">
+            <property name="tag" value="@copyright" />
+            <property name="tagFormat" value="^Copyright \(c\) CSquare. All Right Reserved.$" />
+            <property name="severity" value="error" /> <!-- if not found, warning -->
+            <property name="tagSeverity" value="ignore" /> <!-- if found, display nothing -->
+        </module>
+
+        <!-- Block Checks -->
+        <module name="EmptyBlock">
+            <property name="severity" value="error" />
+            <property name="option" value="text" />
+			<property name="tokens" value="LITERAL_WHILE, LITERAL_TRY, LITERAL_CATCH, LITERAL_FINALLY, LITERAL_DO, LITERAL_IF, LITERAL_ELSE, LITERAL_FOR, INSTANCE_INIT, STATIC_INIT, LITERAL_SWITCH" />
+        </module>
+        <module name="LeftCurly">
+            <property name="severity" value="error" />
+        </module>
+        <module name="NeedBraces">
+            <property name="severity" value="error" />
+        </module>
+        <module name="RightCurly">
+            <property name="severity" value="warning" />
+            <property name="tokens" value="LITERAL_CATCH,LITERAL_FINALLY,LITERAL_ELSE" />
+        </module>
+
+        <!-- Matrices check -->
+        <module name="BooleanExpressionComplexity">
+            <property name="severity" value="error" />
+            <property name="max" value="27" />
+        </module>
+        <module name="ClassDataAbstractionCoupling">
+            <property name="severity" value="error" />
+            <property name="max" value="75" />
+        </module>
+        <module name="ClassFanOutComplexity">
+            <property name="severity" value="error" />
+            <property name="max" value="110" />
+        </module>
+        <module name="CyclomaticComplexity">
+            <property name="severity" value="error" />
+            <property name="max" value="390" />
+        </module>
+        <module name="NPathComplexity">
+            <property name="severity" value="warning" />
+        </module>
+        <module name="JavaNCSS">
+            <property name="severity" value="warning" />
+        </module>
+
+        <!-- Size Violation check -->
+        <module name="LineLength">
+            <property name="severity" value="warning" />
+            <property name="ignorePattern" value="(^\s*?\*\s*?@filesource)|(@NamedQuery)" />
+            <property name="max" value="150" />
+            <property name="tabWidth" value="4" />
+        </module>
+        <module name="MethodLength">
+            <property name="severity" value="error" />
+            <property name="max" value="1800" />
+            <property name="countEmpty" value="false" />
+            <property name="tokens" value="METHOD_DEF" />
+        </module>
+        <module name="ParameterNumber">
+            <property name="severity" value="info" />
+        </module>
+
+        <!-- Whitespace check -->
+        <module name="EmptyForInitializerPad">
+            <property name="severity" value="error" />
+        </module>
+        <module name="EmptyForIteratorPad">
+            <property name="severity" value="error" />
+        </module>
+        <module name="MethodParamPad">
+            <property name="severity" value="error" />
+            <property name="allowLineBreaks" value="true" />
+        </module>
+        <module name="NoWhitespaceAfter">
+            <property name="severity" value="error" />
+            <property name="tokens" value="BNOT,DEC,DOT,INC,LNOT,UNARY_MINUS,UNARY_PLUS" />
+        </module>
+        <module name="NoWhitespaceBefore">
+            <property name="severity" value="error" />
+            <property name="allowLineBreaks" value="true" />
+            <property name="tokens" value="SEMI,DOT,POST_DEC,POST_INC" />
+        </module>
+        <module name="OperatorWrap">
+            <property name="severity" value="error" />
+        </module>
+        <module name="ParenPad">
+            <property name="severity" value="error" />
+        </module>
+        <module name="TypecastParenPad">
+            <property name="severity" value="warning" />
+            <property name="tokens" value="RPAREN,TYPECAST" />
+        </module>
+        <module name="WhitespaceAfter">
+            <property name="severity" value="warning" />
+        </module>
+        <module name="WhitespaceAround">
+            <property name="severity" value="warning" />
+        </module>
+
+        <!-- Naming convention check -->
+        <module name="ConstantName">
+            <property name="severity" value="error" />
+        </module>
+        <module name="LocalFinalVariableName">
+            <property name="severity" value="error" />
+        </module>
+        <module name="LocalVariableName">
+            <property name="severity" value="error" />
+        </module>
+        <module name="MemberName">
+            <property name="severity" value="error" />
+        </module>
+        <module name="MethodName">
+            <property name="severity" value="error" />
+        </module>
+        <module name="PackageName">
+            <property name="severity" value="error" />
+        </module>
+        <module name="ParameterName">
+            <property name="severity" value="error" />
+        </module>
+        <module name="StaticVariableName">
+            <property name="severity" value="error" />
+        </module>
+        <module name="TypeName">
+            <property name="severity" value="error" />
+        </module>
+
+        <!-- Miscellaneous check -->
+        <module name="TodoComment">
+            <property name="severity" value="error" />
+            <property name="format" value="^\s*?[Tt][oO]\s*?[dD][oO]" />
+        </module>
+        <module name="TrailingComment">
+            <property name="severity" value="error" />
+        </module>
+
+        <!-- Modifier check -->
+        <module name="ModifierOrder">
+            <property name="severity" value="error" />
+        </module>
+        <module name="RedundantModifier">
+            <property name="severity" value="error" />
+        </module>
+    </module>
+</module>
